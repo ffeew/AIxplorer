@@ -1,22 +1,12 @@
-sample_size = 5000  # number of papers to sample from the dataset.
-
-dataset_path = "./dataset"  # path to the dataset
-
-chunk_size = 200  # number of tokens per chunk to split the paper into
-
-batch_size = 6000  # number of documents to process in a batch
-
-vector_db_path = "./chromadb"  # path to the vector database
+vector_db_path = (
+    "/home/daniel/Desktop/AIxplorer/chromadb"  # path to the vector database
+)
 
 embeddings_model = "BAAI/bge-small-en"  # embeddings model to use to generate vectors
 
-llm_path = "./mistral-7b-openorca.Q5_K_M.gguf"  # path to the LLM model
+llm_path = "/home/daniel/Desktop/AIxplorer/mistral-7b-openorca.Q5_K_M.gguf"  # path to the LLM model
 
 device = "cuda"  # device to use for the LLM model, "cuda" or "cpu
-
-retrieval_mode = (
-    "vectordb"  # location to retrieve data from, "vectordb" or "google search"
-)
 
 n_gpu_layers = 50  # Change this value based on your model and your GPU VRAM pool. Change to 0 if you are using a CPU.
 

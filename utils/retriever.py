@@ -6,7 +6,7 @@ from langchain.utilities import GoogleSearchAPIWrapper
 from dotenv import load_dotenv
 
 
-def load_retriever(llm):
+def load_retriever(llm, mode=opt.retrieval_mode):
     model_kwargs = {"device": opt.device}
     embeddings_model = HuggingFaceEmbeddings(
         model_name=opt.embeddings_model,
@@ -19,11 +19,11 @@ def load_retriever(llm):
         persist_directory=opt.vector_db_path,
     )
 
-    if opt.retrieval_mode == "vectordb":
+    if mode == "vectordb":
         # load the vector store
         return vector_store.as_retriever()
 
-    elif opt.retrieval_mode == "google search":
+    elif mode == "google search":
         load_dotenv()
         search = GoogleSearchAPIWrapper()
         web_research_retriever = WebResearchRetriever.from_llm(
@@ -32,4 +32,4 @@ def load_retriever(llm):
         return web_research_retriever
 
     else:
-        raise ValueError(f"Unknown retrieval mode: {opt.retrieval_mode}")
+        raise ValueError(f"Unknown retrieval mode: {mode}")

@@ -88,6 +88,26 @@ source venv/bin/activate
 python main.py
 ```
 
+#### Alternatively, you can use AIxplorer through the streamlit GUI:
+
+1. Activate the virtual environment:
+
+```bash
+source venv/bin/activate
+```
+
+2. Navigate to the gui directory:
+
+```bash
+cd gui
+```
+
+3. Start the streamlit server:
+
+```bash
+streamlit run main.py
+```
+
 ## Technology Stack
 
 - **Python**: Core programming language
