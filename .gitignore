@@ -1,0 +1,7 @@
+/venv
+/dataset
+*.zip
+/chromadb
+*.gguf
+.env
+__pycache__
