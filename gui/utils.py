@@ -21,7 +21,7 @@ class StreamHandler(BaseCallbackHandler):
 
 @st.cache_resource
 def st_load_retriever(_llm, mode):
-    model_kwargs = {"device": "cuda"}
+    model_kwargs = {"device": config.device}
     embeddings_model = HuggingFaceEmbeddings(
         model_name=config.embeddings_model,
         model_kwargs=model_kwargs,
