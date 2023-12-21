@@ -88,7 +88,7 @@ source venv/bin/activate
 python main.py
 ```
 
-#### Alternatively, you can use AIxplorer through the streamlit GUI:
+### Alternatively, you can use AIxplorer through the streamlit GUI:
 
 1. Activate the virtual environment:
 
@@ -107,6 +107,13 @@ cd gui
 ```bash
 streamlit run main.py
 ```
+
+### To try out AIxplorer without cloning the repo:
+<a target="_blank" href="https://colab.research.google.com/drive/1GQigpg9leftwxgp7ScFeils1-Ge0tY8Z?usp=sharing">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
+Simply use a GPU runtime on Google Colab (Inference on CPU is extremely slow)
 
 ## Technology Stack
 
